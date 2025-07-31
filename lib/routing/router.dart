@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:usw_circle_link_app_assignment/ui/view/screen/login_screen.dart';
 import 'routes.dart';
 
 GoRouter router() => GoRouter(
@@ -8,11 +9,10 @@ GoRouter router() => GoRouter(
       routes: [
         GoRoute(
           path: Routes.home,
-          builder: (context, state) => Scaffold(
-            body: Center(
-              child: Text('Hello World!'),
-            ),
-          ),
+          builder: (context, state) {
+            return LoginScreen();
+          },
+          routes: [],
         ),
       ],
     );
